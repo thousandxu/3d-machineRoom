@@ -1,0 +1,132 @@
+
+.machine_room_warp {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .search_cabinet_warp {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .canvas_frame {
+        width: 100%;
+        height: 100%;
+    }
+    .cabinet_frame {
+        width: 100%;
+        height: 100%;
+    }
+    .modal_basic_warp {
+        position: fixed;
+        min-width: 320px;
+        max-width: 420px;
+        height: auto;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+        color: #fff;
+        box-sizing: border-box;
+        font-family: PingFangSC-Regular, PingFang SC;
+        i {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+            &:hover {
+                color: #4060ee;
+            }
+        }
+    }
+    .modal_warp {
+        @extend .modal_basic_warp;
+        left: 80px;
+        top: 20px;
+        .rask_field_warp {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 32px;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+    }
+    .server_modal_warp {
+        @extend .modal_basic_warp;
+        left: 80px;
+        top: 20px;
+        .ant-tabs-nav .ant-tabs-tab {
+            margin: 0;
+            color: #FFFFFF;
+        }
+        .basic-info {
+            margin-bottom: 32px;
+            font-size: 0;
+            .content-item {
+                display: inline-block;
+                width: 50%;
+                margin-bottom: 12px;
+                font-size: 12px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.85);
+                line-height: 17px;
+                &:nth-last-of-type(1),
+                &:nth-last-of-type(2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .running-apps {
+            margin: 12px 0 32px 0;
+            font-size: 0;
+            .running-app {
+                padding: 2px 4px;
+                margin: 0 8px 10px 0;
+                font-size: 12px;
+                color: #FFF;
+                background: rgba(0, 0, 0, 0.12);
+                border-radius: 2px;
+                border: 1px solid rgba(255, 255, 255, 0.65);
+            }
+        } 
+        .unhandled-errors {
+            margin-bottom: 20px;
+        }
+        .section-content {
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 17px;
+            .error-content-text {
+                margin: 0 0 6px;
+            }
+            .error-content-time {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.4);
+            }
+            .divider {
+                height: 1px;
+                background: rgba(255, 255, 255, 0.2);
+                margin: 12px 0;
+            }
+        }
+        .modal-title {
+            color: #FFFFFF;
+        }
+        // 图表信息
+        .resource-progress {
+            display: flex;
+            justify-content: space-around;
+            padding: 16px 0;
+            .ant-progress-text {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
